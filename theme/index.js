@@ -1,4 +1,4 @@
-export { lightColors } from "./lightColors";
+export { lightColors as colors } from "./lightColors";
 export { darkColors } from "./darkColors";
 export { fontSizes } from "./fontSizes";
 export { fontWeights } from "./fontWeights";

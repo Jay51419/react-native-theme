@@ -1,8 +1,7 @@
-import React,{useState} from "react";
+import React from "react";
 import { View, Dimensions } from "react-native";
-import { lightColors,darkColors } from "./index";
+import { colors } from "./index";
 export default function (props) {
-  const  [colors, setColor] = useState(lightColors) 
   const screenWidth = Dimensions.get("screen").width;
   const screenHeight = Dimensions.get("screen").height;
   const windowWidth = Dimensions.get("window").width;
