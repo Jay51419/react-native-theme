@@ -1,5 +1,7 @@
-export { colors } from "./colors";
+export { lightColors } from "./lightColors";
+export { darkColors } from "./darkColors";
 export { fontSizes } from "./fontSizes";
 export { fontWeights } from "./fontWeights";
-export { Text } from "./Text";
-export { Box } from "./Box";
+import Text from "./Text";
+import Box from "./Box";
+export { Box, Text };

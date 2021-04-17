@@ -1,6 +1,6 @@
 // if you add extra color then don't forget to update components
 
-export const colors = {
+export const lightColors = {
   primary: "#516091",
   secondary: "#eef3ad",
   tertiary: "#adebbe",

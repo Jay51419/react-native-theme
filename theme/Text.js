@@ -1,7 +1,10 @@
+import React,{useState} from "react";
 import {Text} from "react-native"
-import { colors, fontSizes, fontWeights } from "./index";
+import { lightColors,darkColors, fontSizes, fontWeights } from "./index";
 
 export default function (props) {
+  const  [colors, setColor] = useState(lightColors) 
+
   const styles = {};
   styles["margin"] = props["m"];
   styles["marginTop"] = props["mt"];
