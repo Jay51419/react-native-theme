@@ -1,12 +1,17 @@
 import React from "react";
 import { View, Dimensions } from "react-native";
-import { colors } from "./index";
-export default function (props) {
+import { lightColors } from "./lightColors";
+import { darkColors } from "./darkColors";
+import useColorScheme from "./useColorSheme";
+export default function (props: any) {
+  const { theme } = useColorScheme();
+  const colors = theme === "light" ? lightColors : darkColors;
+
   const screenWidth = Dimensions.get("screen").width;
   const screenHeight = Dimensions.get("screen").height;
   const windowWidth = Dimensions.get("window").width;
   const windowHeight = Dimensions.get("window").height;
-  const styles = {};
+  const styles: any = {};
   styles["flex"] = props["flex"];
   styles["zIndex"] = props["z"];
   styles["width"] = props["w"];

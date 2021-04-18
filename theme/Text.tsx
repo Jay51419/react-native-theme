@@ -1,10 +1,17 @@
-import React,{useState} from "react";
-import {Text} from "react-native"
-import { colors, fontSizes, fontWeights } from "./index";
+import React from "react";
+import { Text } from "react-native";
+import { lightColors } from "./lightColors";
+import { darkColors } from "./darkColors";
+import { fontWeights } from "./fontWeights";
+import { fontSizes } from "./fontSizes";
+import useColorScheme from "./useColorSheme";
 
-export default function (props) {
+export default function (props: any) {
+  const { theme } = useColorScheme();
 
-  const styles = {};
+  const colors = theme === "light" ? lightColors : darkColors;
+
+  const styles: any = {};
   styles["margin"] = props["m"];
   styles["marginTop"] = props["mt"];
   styles["marginRight"] = props["mr"];
@@ -38,7 +45,7 @@ export default function (props) {
   if (props["extraLight"]) styles["fontWeight"] = fontWeights.extraLight;
   if (props["regular"]) styles["fontWeight"] = fontWeights.regular;
   if (props["medium"]) styles["fontWeight"] = fontWeights.medium;
-  if (props["semibold"]) styles["fontWeight"] = fontWeights.semibold;
+  if (props["semibold"]) styles["fontWeight"] = fontWeights.semiBold;
   if (props["bold"]) styles["fontWeight"] = fontWeights.bold;
   if (props["extraBold"]) styles["fontWeight"] = fontWeights.extraBold;
   if (props["auto"]) styles["textAlign"] = "auto";
